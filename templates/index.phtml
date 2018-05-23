@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>PUS</title>
+    <meta name="description" content="URL Shortener">
+    <meta name="author" content="Phillip Partsch">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+<!-- Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container">
+    <div class="row">
+        <div class="column" style="margin-top: 10%">
+            <h1>PUS</h1>
+            <h5><a>P</a>HP <a>U</a>RL <a>S</a>hortener</h5>
+            <br><br>
+            <form method="post">
+                <div class="row">
+                    <div class="six columns">
+                        <label for="url">Your URL</label>
+                        <input class="u-full-width" type="url" placeholder="https://example.com" name="url">
+                    </div>
+                    <div class="three columns">
+                        <label for="short">Your short</label>
+                        <input class="u-full-width" type="text" pattern="[a-zA-Z0-9]*" placeholder="optional" name="short">
+                    </div>
+                </div>
+                <br>
+                <input class="button-primary" type="submit" value="Shorten">
+            </form>
+            <?php if (isset($message)) : ?>
+                <p> <?= htmlspecialchars($message); ?></p>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
+</body>
+</html>
